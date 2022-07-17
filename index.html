@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> Innerve </title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    </head>
+
+    <body>
+        
+
+        <section class = "showcase">
+            <header>
+                <h2 class = "logo"> 
+                    <img src="images\innerve_logo.png" alt="Innerve Logo" width = "180" height = "110 ";>
+                </h2>
+                <div class = "toggle"></div>
+            </header>
+        
+            <div class = "module" id = "module">
+                <video src = "bg_video.mp4" muted loop autoplay></video>
+            </div>
+            
+            <div class="overlay"></div>
+
+            <div class="text">
+                <h2>Innerve</h2>
+                <h4>The Annual Technical Festival of IGDTUW</h4>
+                <div style = "text-align:center">
+                    <a href ="#" >Explore</a>
+                </div>
+            </div>
+
+            <ul class = "social">
+                <li><a href ="#"><img src = "images\instagram.png" alt = "instagram" width = "40" height = "40"></a></li>
+                <li><a href ="#"><img src = "images\youtube.png" alt = "youtube" width = "50" height = "50"></a></li>
+                <li><a href ="#"><img src = "images\twitter.png" alt = "twitter" width = "50" height = "50"></a></li>
+                <li><a href ="#"><img src = "images\facebook.png" alt = "facebook" width = "50" height = "50"></a></li>
+            </ul>
+
+        </section>
+            <div class="menu">
+                <ul>
+                    <li><a href = "#">Home</a></li>
+                    <li><a href = "#">Events</a></li>
+                    <li><a href = "#">Sponsers</a></li>
+                    <li><a href = "#">Social Campaign</a></li>
+                    <li><a href = "#">Meet the Team</a></li>
+                </ul>
+            </div>
+
+            <script>
+                const menuToggle = document.querySelector(".toggle")
+                const showcase = document.querySelector(".showcase")
+
+                menuToggle.addEventListener("click", function(){
+                    menuToggle.classList.toggle("active")
+                    showcase.classList.toggle("active")
+
+                })
+
+                const el = document.querySelector("#module");
+
+                el.addEventListener("mousemove", (e) => {
+                el.style.setProperty('--x', -e.offsetX + "px");
+                el.style.setProperty('--y', -e.offsetY + "px");
+});
+            </script>
+    </body>
+</html>
